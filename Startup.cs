@@ -28,6 +28,7 @@ namespace TPInvestigacion
 
         public void ConfigureServices(IServiceCollection services)
         {
+<<<<<<< HEAD
             //services.AddControllersWithViews();
             services.AddDbContext<TPInvestigacion.Interfaces.DataContext>(x =>
             {
@@ -37,6 +38,17 @@ namespace TPInvestigacion
 
             services.AddControllers();
             services.AddScoped<IApiRepository, ApiRepository>();
+=======
+            services.AddControllersWithViews();
+            services.AddDbContext<Interfaces.DataContext>(x =>
+            {
+                x.UseSqlite(Configuration.GetConnectionString("DefaultConnection"));
+                x.UseLazyLoadingProxies();
+                
+            });
+
+            services.AddControllers();
+>>>>>>> 992711a201efb1dd16c1b07ed23265a48fccd662
 
             // Configuración de Swagger
             services.AddSwaggerGen(c =>

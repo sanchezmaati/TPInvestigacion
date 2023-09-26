@@ -5,8 +5,11 @@ namespace TPInvestigacion.Interfaces
 {
     public class DataContext : DbContext
     {
+<<<<<<< HEAD
         public DbSet<Moto> Motos { get; set; }
 
+=======
+>>>>>>> 992711a201efb1dd16c1b07ed23265a48fccd662
 
         public DataContext() : base()
         {
@@ -16,6 +19,7 @@ namespace TPInvestigacion.Interfaces
         {
         }
 
+<<<<<<< HEAD
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -33,5 +37,10 @@ namespace TPInvestigacion.Interfaces
         }*/
 
 
+=======
+
+
+        public virtual DbSet<Moto> Motos { get; set; }
+>>>>>>> 992711a201efb1dd16c1b07ed23265a48fccd662
     }
 }
